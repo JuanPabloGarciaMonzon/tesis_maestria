@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino Data</title>
+    <link rel="stylesheet" href="monitor.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#section1">Bienvenido</a></li>
+                <li><a href="#section2">Temperatura y Humedad</a></li>
+                <li><a href="#section3">Proximidad</a></li>
+                <li><a href="#section4">Luz</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="data">
+      <section id="section1" class="hero">
+          <h1>{{ titulo }}</h1>
+          <h1>{{ parrafo }}</h1>
+      </section>
+
+      <section id="section2" class="features">
+          <h2>Sensor DHT22</h2>
+          <div class="feature-item">
+              <h3>Temperatura</h3>
+              <p>{{ temperatura }}</p>
+          </div>
+          <div class="feature-item">
+            <h3>Humedad</h3>
+            <p>{{ humedad }}</p>
+        </div>
+      </section>
+
+      <section id="section3" class="proximidad">
+        <h2>Sensor MD-SR04</h2>
+        <div class="feature-item">
+            <h3>Distancia</h3>
+            <p>{{ distancia }}</p>
+        </div>
+      </section>
+
+    <section id="section4" class="luz">
+      <h2>Sensor MD TSL2561</h2>
+      <div class="feature-item">
+          <h3>Luz</h3>
+          <p>{{ luz }}</p>
+      </div>
+    </section>
+
+      <footer>
+          <p>&copy; 2024 Escuela de Postgrado FIUSAC</p>
+      </footer>
+    </div>
+    <script src="monitor.js"></script>
+</body>
+</html>
